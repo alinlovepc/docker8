@@ -1,0 +1,67 @@
+name: 反馈问题 🐛
+description: 项目运行中遇到的Bug或问题。
+title: "🐞 反馈问题："
+labels: ['status: needs check']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### ⚠️ 前置确认 (温馨提示: 未star项目会被自动关闭issue哦!)
+        1. 是否国外服务器，并且未被墙(必须)
+        2. 服务器规格是否 >= 1C1G(必须)
+        3. 在提交issue之前，请务必确保没有包含个人数据！！！
+  - type: checkboxes
+    attributes:
+      label: 前置确认
+      options:
+        - label: 我确认使用的是国外未被墙的服务器，并且服务器规格 >= 1C1G
+          required: true
+  - type: checkboxes
+    attributes:
+      label: ⚠️ 采用脚本进行部署，非脚本部署问题将不被受理
+      options:
+        - label: 我确认使用的是最新脚本部署
+          required: true
+  - type: checkboxes
+    attributes:
+      label: ⚠️ 搜索issues中是否已存在类似问题
+      description: >
+        请在 [历史issue](https://github.com/dqzboy/Docker-Proxy/issues) 中清空输入框，搜索你的问题或在[问题总结](https://github.com/dqzboy/Docker-Proxy/blob/main/Issue/issue.md)查找相关问题，以及相关日志的关键词来查找是否存在类似问题。
+      options:
+        - label: 我已经搜索过issues、disscussions和问题总结，没有跟我遇到的问题相关的issue
+          required: true
+  - type: markdown
+    attributes:
+      value: |
+        请在上方的`title`中填写你对你所遇到问题的简略总结，这将帮助其他人更好的找到相似问题，谢谢❤️。
+  - type: dropdown
+    attributes:
+      label: 操作系统类型?
+      description: >
+        请选择你运行程序的操作系统类型。
+      options:
+        - CentOS 7
+        - CentOS 8
+        - Redhat
+        - Ubuntu
+        - Other (请在问题中说明)
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 复现步骤 🕹
+      description: |
+        **⚠️ 不能复现将会关闭issue.**
+  - type: textarea
+    attributes:
+      label: 问题描述 😯
+      description: 详细描述出现的问题，或提供有关截图。
+  - type: textarea
+    attributes:
+      label: 终端日志 📒
+      description: |
+        在此处粘贴终端日志
+      value: |
+        ```log
+        <此处粘贴终端日志>
+        ```
